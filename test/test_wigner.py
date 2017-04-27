@@ -70,13 +70,13 @@ class TestWigner6j(unittest.TestCase):
 class TestWigner9j(unittest.TestCase):
 
     def test_9j(self):
-        self.assertAlmostEqual(wc.wigner9j(2*1 ,2*2, 2*1, 2*2, 2*2, 2*2, 2*1, 2*2, 2*1),
+        self.assertAlmostEqual(wc.wigner9j(2*1 ,2*2, 2*1, 2*2, 2*2, 2*2, 2*1, 2*2, 2*1)[0],
                                -1.0/150)
-        self.assertAlmostEqual(wc.wigner9j(2*1, 2*1, 2*1, 2*1, 2*1, 2*1, 2*1, 2*1, 2*0),
+        self.assertAlmostEqual(wc.wigner9j(2*1, 2*1, 2*1, 2*1, 2*1, 2*1, 2*1, 2*1, 2*0)[0],
                                1.0/18)
-        self.assertAlmostEqual(wc.wigner9j(2*1, 2*1, 2*1, 2*1, 2*1, 2*1, 2*1, 2*1, 2*1),
+        self.assertAlmostEqual(wc.wigner9j(2*1, 2*1, 2*1, 2*1, 2*1, 2*1, 2*1, 2*1, 2*1)[0],
                                0.0)
-        self.assertAlmostEqual(wc.wigner9j(2*3, 2*3, 2*2, 2*3, 2*3, 2*2, 2*3, 2*3, 2*2),
+        self.assertAlmostEqual(wc.wigner9j(2*3, 2*3, 2*2, 2*3, 2*3, 2*2, 2*3, 2*3, 2*2)[0],
                                3221*np.sqrt(70)/(246960*np.sqrt(105)) - 365/(3528*np.sqrt(70)*np.sqrt(105)))
 
 if __name__=='__main__':
